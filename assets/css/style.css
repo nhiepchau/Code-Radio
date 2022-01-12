@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+
+/* Title */
+
+
+/* Timer */
+
+
+/* Quote */
+
+
+/* Radio */
+
+
+/* Modal */
+
+
+
+/* Responsive */
+@media screen and (max-width: 820px) {
+    body {
+        display: none;
+    }
+}
