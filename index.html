@@ -17,36 +17,63 @@
         <title>Document</title>
     </head>
     <body>
-        <main>
-            <ul class="nav">
-                <li class="nav-item">
-                    <div class="btn toggle-btn">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="toDoList"></div>
-                </li>
-                <li class="nav-item">
-                    <div>Code radio</div>
-                </li>
-                <li class="nav-item">
-                    <div>Main</div>
-                </li>
-                <li class="nav-item">
-                    <div>About</div>
-                </li>
-            </ul>
+        <ul class="nav">
+            <li class="nav-item">
+                <div class="btn toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="toDoList"></div>
+            </li>
+            <li class="nav-item">
+                <div>Code radio</div>
+            </li>
+            <li class="nav-item">
+                <div>Main</div>
+            </li>
+            <li class="nav-item">
+                <div>About</div>
+            </li>
+        </ul>
 
-            <div class="title">Focus and code better</div>
+        <div class="title">Focus and code better</div>
 
-            <div class="timer"></div>
+        <div class="timer"></div>
 
-            <div class="quote"></div>
+        <div class="quote"></div>
 
-            <div class="radio"></div>
+        <div class="radio">
+            <img id="song_img"/>
+            <div class="song_decs">
+                <p class="title">Song name</p>
+                <div class="artist">Artist name</div>
+            </div>
 
-            <div class="timerModal"></div>
-            <div class="giveupModal"></div>
-        </main>
+            <div class="song_control">
+                <button onclick="previous_song()" id="pre_song">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button onclick="play_pause()" id="play_pause">
+                    <i class="fas fa-play-circle"></i>
+                </button>
+
+                <button onclick="next_song()" id="next_song">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+
+            <div class="song_duration">
+                <input type="range" min="0" max="100" id="duration_slider" onclick="change_duration()">
+            </div>
+
+            <div class="volume">
+                <i class="fas fa-volume-up" id="volume_icon" onclick="toggle_sound()" ></i>
+                <input type="range" min="0" id="recent_volume" max="100" value="90" oninput="volume_change()"/>
+            </div>
+        </div>
+
+        <div class="timerModal"></div>
+        <div class="giveupModal"></div>
         
         <script src="assets/js/timer.js" type="text/javascript"></script>
         <script src="assets/js/toDoList.js" type="text/javascript"></script>
