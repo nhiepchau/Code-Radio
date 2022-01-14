@@ -99,6 +99,7 @@ function volume_change() {
 }
 
 function change_duration() {
+    if(track.ended) play_song()
     clearInterval(timer)
     track.currentTime = track.duration*(slider.value/100)
     timer = setInterval(range_slider, 1000)
