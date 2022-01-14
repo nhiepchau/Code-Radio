@@ -95,6 +95,7 @@ function previous_song() {
 }
 
 function volume_change() {
+    if(is_mute) return
     track.volume = recent_volume.value/100
 }
 
