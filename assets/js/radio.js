@@ -58,7 +58,7 @@ function load_track(index_no) {
 	track_image.src = all_song[index_no].img
     track.src = all_song[index_no].path
     track.load()
-    timer = setInterval(range_slider, 500)
+    timer = setInterval(range_slider, 1000)
 }
 load_track(0)
 
@@ -99,7 +99,9 @@ function volume_change() {
 }
 
 function change_duration() {
+    clearInterval(timer)
     track.currentTime = track.duration*(slider.value/100)
+    timer = setInterval(range_slider, 1000)
 }
 
 function range_slider() {
