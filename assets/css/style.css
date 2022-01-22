@@ -39,6 +39,124 @@ body {
 
 /* Navbar */
 
+.nav {
+    list-style-type: none;
+    position: relative;
+    height: 80px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: radial-gradient(100% 9916.67% at 0.83% 0%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.nav li a:hover{
+    color: #817382;
+}
+.nav-item{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+}
+
+#first-nav.nav-item {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    left: 27px;
+    top: 27px;
+    font-size:30px;
+    color: #FFFFFF;
+}
+
+#second-nav.nav-item {
+    position: absolute;
+    width: 317px;
+    left: 40%;
+    top: 15px;
+    bottom: 33px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+#third-nav.nav-item{
+    text-decoration: none;
+    position: absolute;
+    width: 100px;
+    height: 26px;
+    left: 80%;
+    top: 27px;
+
+    color: #FFFFFF;
+    line-height: 29px;
+    
+}
+#fourth-nav.nav-item{
+    text-decoration: none;
+    position: absolute;
+    width: 100px;
+    height: 26px;
+    left: 90%;
+    top: 27px;
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#first-nav.nav-item div:hover .toDoList{
+    display: block;
+}
+.toDoList{
+    white-space: nowrap;
+    display: none;
+    margin-top: 19px;
+    position: absolute;
+    padding: 15px 27px;
+    left:-27px;
+    color: #817382;
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 35px;
+    background: radial-gradient(100% 9916.67% at 0.83% 0%, rgba(255, 255, 255, 0.7) 99.99%, rgba(255, 255, 255, 0.15) 100%);
+}
+
+.toDoList li {
+    list-style-type: none;
+}
+#zero{
+    /* color: black; */
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 33px;
+
+
+    color: #FFFFFF;
+
+}
 
 /* Title */
 
