@@ -19,7 +19,7 @@ document.addEventListener("click", function (e) {
 const previous = document.querySelector('.radio #pre_song')
 const play = document.querySelector('.radio #play_pause')
 const next = document.querySelector('.radio #next_song')
-const title = document.querySelector('.radio .song_decs .title')
+const title = document.querySelector('.radio .song_decs .radio_title')
 const recent_volume = document.querySelector('.radio #recent_volume')
 const slider = document.querySelector('.radio #duration_slider')
 const track_image = document.querySelector('.radio #song_img')

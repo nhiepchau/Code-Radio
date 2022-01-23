@@ -12,10 +12,19 @@ body {
     height: 100vh;
     width: 100vw;
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../img/sea-edge-79ab30e2.png");
-    background-repeat: no-repeat;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    background: url("../img/sea-edge-79ab30e2.png") no-repeat center center fixed;
     background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.invisible {
+    display: none !important;
 }
 
 /* Ripple */
@@ -42,144 +51,149 @@ body {
 .nav {
     list-style-type: none;
     position: relative;
-    height: 80px;
+    height: 50px;
     left: 0px;
-    right: 0px;
     top: 0px;
+    width: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background: radial-gradient(100% 9916.67% at 0.83% 0%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.15) 100%);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
 }
 
-.nav li a{
-    text-decoration: none;
+.nav .nav-item {
+    display: inline-block;
+    font-weight: 600;
     color: #FFFFFF;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    text-align: center;
-    position: relative;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
-.nav li a:hover{
-    color: #817382;
+.nav #right-item {
+    width: 210px;
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
 }
-.nav-item{
+
+.nav #right-item a:hover {
+    filter: brightness(95%);
+}
+
+.nav #center-item {
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 32px;
 }
 
-#first-nav.nav-item {
+.nav #left-item {
+    float: left;
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav #left-item .toggle-btn {
+    font-size: 34px;
+    cursor: pointer;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav #left-item .toggle-btn:hover {
+    filter: brightness(95%);
+}
+
+/* To do list */
+.toDoList {
     position: absolute;
-    width: 40px;
-    height: 30px;
-    left: 27px;
-    top: 27px;
-    font-size:30px;
-    color: #FFFFFF;
+    top: 100%;
+    width: 220px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    color: var(--gray);
 }
 
-#second-nav.nav-item {
-    position: absolute;
-    width: 317px;
-    left: 40%;
-    top: 15px;
-    bottom: 33px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 59px;
-    text-align: center;
-    
-    color: #FFFFFF;
-}
-#third-nav.nav-item{
-    text-decoration: none;
-    position: absolute;
-    width: 100px;
-    height: 26px;
-    left: 80%;
-    top: 27px;
-
-    color: #FFFFFF;
-    line-height: 29px;
-    
-}
-#fourth-nav.nav-item{
-    text-decoration: none;
-    position: absolute;
-    width: 100px;
-    height: 26px;
-    left: 90%;
-    top: 27px;
-    color: #FFFFFF;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.toDoList .heading {
+    padding: 4px 16px;
+    line-height: 1.5;
+    /* font-weight: 600; */
+    font-size: 20px;
+    /* color: #FFFFFF; */
+    /* text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); */
 }
 
-#first-nav.nav-item div:hover .toDoList{
+.toDoList .task-list {
+    max-height: 180px;
+    list-style-type: none;
+    background-color: transparent;
+    overflow: auto;
+}
+
+.toDoList .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    font-size: 16px;
+    /* font-weight: 600; */
+}
+
+.toDoList .task-item i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.toDoList .task-item .fa-times {
+    display: none;
+    animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.toDoList .task-item:hover .fa-times {
     display: block;
 }
-.toDoList{
-    white-space: nowrap;
-    display: none;
-    margin-top: 19px;
-    position: absolute;
-    padding: 15px 27px;
-    left:-27px;
-    color: #817382;
-    font-family: Oxanium;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 35px;
-    background: radial-gradient(100% 9916.67% at 0.83% 0%, rgba(255, 255, 255, 0.7) 99.99%, rgba(255, 255, 255, 0.15) 100%);
+
+.toDoList .task-text {
+    flex: 1;
+    padding: 0 8px;
 }
 
-.toDoList li {
-    list-style-type: none;
+.toDoList .add-to-do {
+    width: 100%;
+    height: 40px;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 16px;
+    /* font-weight: 600; */
+    color: var(--gray);
+    background-color: transparent;
 }
-#zero{
-    /* color: black; */
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 28px;
-    line-height: 33px;
 
-
-    color: #FFFFFF;
-
-}
 
 /* Title */
-
 .title{
-    white-space: nowrap;
-
-}
-
-.subtitle{
+    pointer-events: none;
     width:100%;
-    height: 117px;
     position: absolute;
-    top: 70px;
+    top: 68px;
+    font-weight: 600;
     text-align: center;
-    
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 96px;
-line-height: 117px;
-color: #FFFFFF;
+    font-size: 66px;
+    color: #FFFFFF;
 }
+
 /* Timer */
 
 
@@ -189,7 +203,7 @@ color: #FFFFFF;
 /* Radio */
 .radio {
     position: absolute;
-    height: 78px;
+    height: 70px;
     width: 100%;
     left: 0px;
     right: 0px;
@@ -242,15 +256,14 @@ color: #FFFFFF;
     top: 6px;
 }
 
-.radio .song_decs .title {
-    font-size: 18px;
-    margin: 4px 0px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+.radio .song_decs .radio_title {
+    font-size: 20px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
 .radio .song_decs .artist {
     font-size: 14px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
 .radio .song_duration {
@@ -258,7 +271,7 @@ color: #FFFFFF;
     bottom: 0px;
     left: 90px;
     height: 24px;
-    width: 70%;
+    width: 80%;
 }
 
 .radio #duration_slider {

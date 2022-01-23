@@ -14,54 +14,50 @@
             referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="assets/css/style.css" />
-        <title>Document</title>
+        <title>Radio</title>
     </head>
     <body>
         <ul class="nav">
-            <li class="nav-item">
-                <div class="btn toggle-btn">
-                    <i class="fas fa-bars"></i>
-                    <div class = "toDoList">
-                        <ul> <div id = "zero"> Chau's tasks </div>
-                            <li id = "first">
-                                <input type = "checkbox">  Watch records
-                            </li>
-                            <li id = "second">
-                                <input type = "checkbox">  Listen to music
-                            </li>
-                            <li id = "third">
-                                <input type = "checkbox">  Be crazy
-                            </li>
-                            <li id = "fourth">
-                                <input type = "checkbox">  Design UI
-                            </li>
-                            <li id = "fifth">
-                                <br>
-                                New todo...
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <li class="nav-item" id = "left-item">
+                <i class="fas fa-bars toggle-btn"></i>
             </li>
-            <li class="nav-item" id = "second-nav">
+            <li class="nav-item" id = "center-item">
                 <div>Code radio</div>
             </li>
-            <li class="nav-item" id = "third-nav">
-                <div>
-                    <a href="https://www.facebook.com/">Main</a> 
-                </div>
+            <li class="nav-item" id = "right-item">
+                <a href="#">Main</a>
+                <a href="#">About</a>
             </li>
-            <li class="nav-item" id = "fourth-nav">
-                <div>
-                    <a href="https://fullstack.edu.vn/">About</a> 
-                </div>
-            </li>
+            <div class="toDoList">
+                <div class="heading">Your task</div>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <i class="far fa-square"></i>
+                        <p class="task-text">Watch record</p>
+                        <i class="fas fa-times"></i>
+                    </li>
+                    <li class="task-item">
+                        <i class="far fa-check-square"></i>
+                        <p class="task-text">Listen to music</p>
+                        <i class="fas fa-times"></i>
+                    </li>
+                    <li class="task-item">
+                        <i class="far fa-square"></i>
+                        <p class="task-text">Be crazy</p>
+                        <i class="fas fa-times"></i>
+                    </li>
+                    <li class="task-item">
+                        <i class="far fa-square"></i>
+                        <p class="task-text">Design UI</p>
+                        <i class="fas fa-times"></i>
+                    </li>
+                </ul>
+                <input class="add-to-do" type="text" placeholder="New todo...">
+            </div>
         </ul>
 
         <div class="title">
-            <div class = "subtitle">
-                Focus and code better
-            </div>
+            Focus and code better
         </div>
 
         <div class="timer"></div>
@@ -71,7 +67,7 @@
         <div class="radio">
             <img id="song_img"/>
             <div class="song_decs">
-                <p class="title">Song name</p>
+                <p class="radio_title">Song name</p>
                 <div class="artist">Artist name</div>
             </div>
 
