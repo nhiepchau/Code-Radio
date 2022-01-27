@@ -40,7 +40,86 @@
             Focus and code better
         </div>
 
-        <div class="timer"></div>
+        <div class="timer">
+            <div class="time-state">
+                <p id="t-state">Pomodoro</p>
+                <p id="time">25 : 00</p>
+            </div>
+
+            <button id="bt-control-time" class="time_control">
+                START
+            </button>
+        </div>
+
+        <div class="cf_modal" id="cf-restart">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">&times;</span>
+                    <p>Are you sure?</p>
+                </div>
+
+                <div class="modal_body">
+                    <p>
+                        Do you really want to quit this pomodoro? Be careful before you give up. 
+                    </p>
+                </div>
+
+                <div class="modal_footer">
+                    <button id="confirm">Save</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf_modal" id="timer-settings">
+            <div class="modal_content" id="settings">
+                <div class="modal_header" id="settings-header">
+                    <span class="close">&times;</span>
+                    <p>Timer Settings</p>                    
+                </div>
+                <hr id="first-line">
+
+                <div class="modal_body" id="settings-body">
+                    <div class="time-settings">
+                        <p>Time (minutes)</p>
+                        <div>
+                            <label for="pomodoro">Pomodoro</label><br>
+                            <input type="number" id="pomodoro" value="25">
+                        </div>
+                        <div>
+                            <label for="short-break">Short Break</label><br>
+                            <input type="number" id="short-break" value="5">
+                        </div>
+                        <div>
+                            <label for="long-break">Long Break</label><br>
+                            <input type="number" id="long-break" value="15">
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="auto-but">
+                        <span>Auto start Breaks?</span>
+                        <input type="checkbox" id="auto-break" value="auto-break">
+                    </div>
+                    <hr>
+
+                    <div class="auto-but">
+                        <span>Auto start Pomodoros?</span>
+                        <input type="checkbox" id="auto-pomo" value="auto-pomo">
+                    </div>
+                    <hr>
+
+                    <div class="nums-long-breaks">
+                        <span>Long Break interval</span>
+                        <input type="number" id="nums-break" value="4">
+                    </div>
+                </div>
+
+                <div class="modal_footer">
+                    <button id="save">Save</button>
+                </div>                
+            </div>
+        </div>
 
         <div class="quote"></div>
 

@@ -212,6 +212,230 @@ a {
 }
 
 /* Timer */
+.timer {
+    position: relative;
+    top: 200px;
+    height: 242px;
+    width: 377px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 35px;
+
+}
+
+.time-state {  
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#t-state {
+    position: relative;
+    top: 15px;
+    font-size: 24px;
+    color: #2F41A0;
+}
+
+#t-state:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+#time {
+    position: relative;
+    top: 20px;
+    font-size: 96px;
+    color: #FFFFFF;
+}
+
+.time_control {
+    position: relative;
+    top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 56px;
+    width: 218px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: #FFFFFF;
+    border-radius: 60px;
+    display: block;
+    align-items: center;
+
+    padding: 13px 48px 11px 48px;
+    color: #2F41A0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#time:hover, #time:active {
+    cursor: pointer;
+    color: #2F41A0;
+}
+
+.time_control:hover, .time_control:active {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #2F41A0;
+}
+
+.cf_modal {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.43);
+}
+
+#cf-restart {
+    display: none;
+}
+
+#timer-settings {
+    display: none;
+}
+
+.modal_content {
+    position: relative;
+    top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    width: 535px;
+    height: 242px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal_header {
+    color: #2F41A0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.modal_header p {
+    padding: 28px 21px 16px 21px;
+}
+
+#settings {
+    top: 60px;
+    width: 524px;
+    height: 635px;
+}
+
+#settings hr {
+    margin: 23px 0px 23px 0px;
+    width: 482px;
+    color: #ABA9BB;
+}
+
+#settings #first-line {
+    margin: 0px 21px 23px 21px;
+}
+
+.time-settings div {
+    float: left;
+    margin-bottom: 23px;
+}
+
+.time-settings input, .nums-long-breaks input {
+    width: 140px;
+    height: 50px;
+    margin: 5px 31px 0px 0px;
+    font-size: 26px;
+    padding-left: 14px;
+    background-color: #EFEFEF;
+    border: none;
+    border-radius: 8px;
+    color: #555555;
+}
+
+.time-settings label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #bbbbbb;
+}
+
+.time-settings #long-break {
+    margin-right: 0;
+}
+
+.nums-long-breaks input {
+    margin: 0;
+    width: 100px;
+    height: 50px;
+    float: right;    
+}
+
+.auto-but input {
+    width: 32px;
+    height: 32px;
+    float: right;
+}
+
+.close {
+    float: right;
+    padding: 0px 10px 0px 10px;
+}
+
+.close:hover, .close:active {
+    cursor: pointer;
+    color: #777586;
+}
+
+#settings-body p, #settings-body span {
+    padding-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2F384F;
+    margin-bottom: 12px;
+}
+
+#settings-body div {
+    margin-bottom: 43px;
+}
+
+.modal_body {
+    font-size: 20px;
+    margin: 0px 21px;
+    color: #2F384F;
+}
+
+.modal_footer button{
+    height: 50px;
+    width: 140px;
+    float: right;
+    margin: 31px 22px;
+    border: none;
+    border-radius: 60px;
+
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    border: 1px solid #2F384F;
+    background-color: #FFFFFF;
+    color: #2F384F;
+}
+
+#cancel {
+    margin-right: 0px;
+}
+
+.modal_footer button:hover, .modal_footer button:active {
+    cursor: pointer;
+    background-color: #2F384F;
+    color: #FFFFFF;
+}
+
+.cf_modal:hover {
+    cursor: pointer;
+}
 
 
 /* Quote */
@@ -336,6 +560,12 @@ a {
 
 /* Responsive */
 @media screen and (max-width: 820px) {
+    body {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 700px) {
     body {
         display: none;
     }
