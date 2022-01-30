@@ -48,9 +48,6 @@ let playing_song = false
 let timer
 let is_mute = false
 
-slider.addEventListener('input',() => {
-    slider_track.style.width = slider.value+'%'
-})
 
 //create a audio Element
 let track = document.createElement('audio')
@@ -107,9 +104,14 @@ function volume_change() {
     track.volume = recent_volume.value/100
 }
 
-function change_duration() {
-    if(track.ended) play_song()
+function track_duration() {
     clearInterval(timer)
+    slider_track.style.width = slider.value+'%'
+    pause_song()
+}
+
+function change_duration() {
+    play_song()
     track.currentTime = track.duration*(slider.value/100)
     timer = setInterval(range_slider, 1000)
 }
