@@ -213,10 +213,12 @@ a {
 
 /* Timer */
 .timer {
-    position: relative;
-    top: 200px;
-    height: 242px;
-    width: 377px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(255, 255, 255, 0.5);
@@ -232,7 +234,7 @@ a {
 
 #t-state {
     position: relative;
-    top: 15px;
+    top: 10px;
     font-size: 24px;
     color: #2F41A0;
 }
@@ -244,25 +246,25 @@ a {
 
 #time {
     position: relative;
-    top: 20px;
-    font-size: 96px;
+    top: 5px;
+    font-size: 90px;
     color: #FFFFFF;
 }
 
 .time_control {
     position: relative;
-    top: 30px;
+    top: 5px;
     margin-left: auto;
     margin-right: auto;
-    height: 56px;
-    width: 218px;
+    height: 50px;
+    width: 168px;
     background-color: rgba(255, 255, 255, 0.8);
     border: #FFFFFF;
     border-radius: 60px;
     display: block;
     align-items: center;
 
-    padding: 13px 48px 11px 48px;
+    padding: 11px 30px 13px 30px;
     color: #2F41A0;
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
@@ -302,52 +304,51 @@ a {
 
 .modal_content {
     position: relative;
-    top: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     background-color: #FFFFFF;
     border-radius: 16px;
     width: 535px;
-    height: 242px;
+    height: 203px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal_header {
     color: #2F41A0;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .modal_header p {
-    padding: 28px 21px 16px 21px;
+    padding: 22px 18px 16px 18px;
 }
 
 #settings {
-    top: 60px;
-    width: 524px;
-    height: 635px;
+    width: 424px;
+    height: 480px;
 }
 
 #settings hr {
-    margin: 23px 0px 23px 0px;
-    width: 482px;
+    margin: 19px 0px 19px 0px;
+    width: 388px;
     color: #ABA9BB;
 }
 
 #settings #first-line {
-    margin: 0px 21px 23px 21px;
+    margin: 0px 18px 14px 18px;
 }
 
 .time-settings div {
     float: left;
-    margin-bottom: 23px;
+    margin-bottom: 19px;
 }
 
 .time-settings input, .nums-long-breaks input {
-    width: 140px;
-    height: 50px;
-    margin: 5px 31px 0px 0px;
-    font-size: 26px;
+    width: 116px;
+    height: 42px;
+    margin: 5px 20px 0px 0px;
+    font-size: 24px;
     padding-left: 14px;
     background-color: #EFEFEF;
     border: none;
@@ -368,19 +369,18 @@ a {
 .nums-long-breaks input {
     margin: 0;
     width: 100px;
-    height: 50px;
     float: right;    
 }
 
 .auto-but input {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     float: right;
 }
 
 .close {
     float: right;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 19px 0px 19px;
 }
 
 .close:hover, .close:active {
@@ -397,20 +397,20 @@ a {
 }
 
 #settings-body div {
-    margin-bottom: 43px;
+    margin-bottom: 19px;
 }
 
 .modal_body {
     font-size: 20px;
-    margin: 0px 21px;
+    margin: 0px 18px;
     color: #2F384F;
 }
 
 .modal_footer button{
-    height: 50px;
-    width: 140px;
+    height: 42px;
+    width: 120px;
     float: right;
-    margin: 31px 22px;
+    margin: 20px 18px;
     border: none;
     border-radius: 60px;
 
