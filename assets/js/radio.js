@@ -21,7 +21,9 @@ const play = document.querySelector('.radio #play_pause')
 const next = document.querySelector('.radio #next_song')
 const title = document.querySelector('.radio .song_decs .radio_title')
 const recent_volume = document.querySelector('.radio #recent_volume')
+const volume_track = document.querySelector('.radio .volume_track')
 const slider = document.querySelector('.radio #duration_slider')
+const slider_track = document.querySelector('.radio .slider_track')
 const track_image = document.querySelector('.radio #song_img')
 const artist = document.querySelector('.radio .artist')
 const volume_icon = document.querySelector('.radio #volume_icon')
@@ -46,12 +48,17 @@ let playing_song = false
 let timer
 let is_mute = false
 
+slider.addEventListener('input',() => {
+    slider_track.style.width = slider.value+'%'
+})
+
 //create a audio Element
 let track = document.createElement('audio')
 
 
 function load_track(index_no) {
     slider.value = 0
+    slider_track.style.width = slider.value+'%'
     clearInterval(timer)
     title.innerHTML = all_song[index_no].name
     artist.innerHTML = all_song[index_no].author
@@ -95,6 +102,7 @@ function previous_song() {
 }
 
 function volume_change() {
+    volume_track.style.width = recent_volume.value+'%'
     if(is_mute) return
     track.volume = recent_volume.value/100
 }
@@ -111,6 +119,7 @@ function range_slider() {
     if(!isNaN(track.duration)) {
         position = track.currentTime * (100/track.duration)
         slider.value = position
+        slider_track.style.width = slider.value+'%'
     }
     if(track.ended) next_song()
 }
@@ -125,4 +134,9 @@ function toggle_sound() {
     }
     volume_icon.classList.toggle('fa-volume-up')
     volume_icon.classList.toggle('fa-volume-mute')
+}
+
+function track_s(element) {
+    console.log(element);
+    element.style.width = slider.value+'%'
 }

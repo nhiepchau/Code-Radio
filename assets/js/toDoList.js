@@ -20,7 +20,7 @@ for(let i = 0; i < taskListData.length; i++) {
 }
 
 document.addEventListener('keypress',(e) => {
-    if(e.key == 'Enter' && taskInput.value!='') addTask()
+    if(e.key == 'Enter' && taskInput.value!='' && taskInput.value.trim()!='') addTask()
 })
 
 navBtn.addEventListener('click',(e) => {

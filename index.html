@@ -146,11 +146,15 @@
 
             <div class="song_duration">
                 <input type="range" min="0" max="100" id="duration_slider" onclick="change_duration()">
+                <div class="slider_track"></div>
             </div>
 
             <div class="volume">
                 <i class="fas fa-volume-up" id="volume_icon" onclick="toggle_sound()" ></i>
-                <input type="range" min="0" id="recent_volume" max="100" value="90" oninput="volume_change()"/>
+                <div style="position: relative;width: 130px;">
+                    <input type="range" min="0" id="recent_volume" max="100" value="90" oninput="volume_change()"/>
+                    <div class="volume_track"></div>
+                </div>
             </div>
         </div>
 
