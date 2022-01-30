@@ -139,33 +139,37 @@ function count_down() {
 }
 
 bt_time.onclick = () => {
-    modal_open("timer-settings");
+    let on_off = bt_on_off.innerText;
 
-    bt_save.onclick = () => {
-        let temp_pomo = document.getElementById("pomodoro").value;
-        let temp_short = document.getElementById("short-break").value;
-        let temp_long = document.getElementById("long-break").value;
-        let temp_breaks = document.getElementById("nums-break").value;
+    if (on_off == "START") {
+        modal_open("timer-settings");
 
-        if (temp_pomo != 0 && temp_short != 0 && temp_long != 0 && temp_breaks != 0) {
-            time_pomo = temp_pomo;
-            short_break = temp_short;
-            long_break = temp_long;
-            nums_break = temp_breaks;
-            auto_pomo = document.getElementById("auto-pomo").checked;
-            auto_break = document.getElementById("auto-break").checked;
-
-            let on_off = bt_on_off.innerText;
-
-            if (on_off == "START") {
-                reset_time();
+        bt_save.onclick = () => {
+            let temp_pomo = document.getElementById("pomodoro").value;
+            let temp_short = document.getElementById("short-break").value;
+            let temp_long = document.getElementById("long-break").value;
+            let temp_breaks = document.getElementById("nums-break").value;
+    
+            if (temp_pomo != 0 && temp_short != 0 && temp_long != 0 && temp_breaks != 0) {
+                time_pomo = temp_pomo;
+                short_break = temp_short;
+                long_break = temp_long;
+                nums_break = temp_breaks;
+                auto_pomo = document.getElementById("auto-pomo").checked;
+                auto_break = document.getElementById("auto-break").checked;
+    
+                let on_off = bt_on_off.innerText;
+    
+                if (on_off == "START") {
+                    reset_time();
+                }
+                modal_close("timer-settings");
             }
+        }
+    
+        document.querySelector("#settings-header span").onclick = () => {
             modal_close("timer-settings");
         }
-    }
-
-    document.querySelector("#settings-header span").onclick = () => {
-        modal_close("timer-settings");
     }
 }
 

@@ -26,7 +26,7 @@ body {
     position: absolute;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     
-    background: url("../img/sea-edge-79ab30e2.png") no-repeat center center fixed;
+    background: url("../img/background_web.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -565,7 +565,7 @@ a {
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 500px) {
     body {
         display: none;
     }
